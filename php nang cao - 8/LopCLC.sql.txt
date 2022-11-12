@@ -1,0 +1,87 @@
+-- phpMyAdmin SQL Dump
+-- version 5.1.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost
+-- Generation Time: May 04, 2022 at 06:39 AM
+-- Server version: 10.4.21-MariaDB
+-- PHP Version: 7.4.27
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `dct108x`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sinhvien`
+--
+
+CREATE TABLE `sinhvien` (
+  `mssv` varchar(128) NOT NULL,
+  `hoten` varchar(128) NOT NULL,
+  `ngaysinh` date NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `sinhvien`
+--
+
+INSERT INTO `sinhvien` (`mssv`, `hoten`, `ngaysinh`) VALUES
+('112233', 'Mot Anh Nong Dan', '1981-04-01'),
+('999999', 'Vo Thang Dau', '1990-05-01');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `username` varchar(128) NOT NULL,
+  `password` varchar(128) NOT NULL,
+  `avatar` varchar(128) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`username`, `password`, `avatar`) VALUES
+('hailua', '654321', 'xau thiet xau'),
+('dummy', 'abc123', NULL),
+('abc', '1232', '112'),
+('anh2lua', 'e10adc3949ba59abbe56e057f20f883e', '4321'),
+('conmeo', '2605f3289471df3d8a384f09dba480c9', 'de thuong ghe'),
+('conheo', 'a5e853152b1e5e415c4b5e416073f007f8555aa6', '123456');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `sinhvien`
+--
+ALTER TABLE `sinhvien`
+  ADD PRIMARY KEY (`mssv`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`username`);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
