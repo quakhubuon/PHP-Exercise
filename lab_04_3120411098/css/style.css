@@ -106,7 +106,7 @@ a{
 .box{
 	margin:5px;
 	float:left;
-	width:250px;
+	width:300px;
 	text-align:center;
 }
 
@@ -232,7 +232,7 @@ a{
 
 #quanlygiohang table{
 	border: 1px solid #369;
-	width: 530px;
+	width: 640px;
 	padding: 0;
 	border-spacing:0px;
 	text-align:left;
